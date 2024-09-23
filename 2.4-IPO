@@ -1,0 +1,17 @@
+Choose two scenarios and create an IPO chart:
+
+How many pizzas to order for a party. Assume everyone will eat two slices and each pizza has eight slices.
+Output - The amount of pizzas needed for the party
+Input - The amount of people at the party
+Processing - Multiply the amount of people at the party by two. Divide the amount by eight (slices per pizza). If the number is not whole, round up to the nearest multipel of eight.
+
+
+Calculating a team’s win percentage.
+Halfway through a hockey season, determine a particular player’s projected number of goals scored for the whole season.
+Determine the average serve speed of a tennis player’s last five serves.
+
+Choose two scenarios and create an IPO chart:
+Your friend asks you to do their homework for them.
+Ordering a meal from uber eats
+Purchasing a snack from the vending machine
+Checking-out groceries at the self-checkout
