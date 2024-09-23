@@ -57,7 +57,3 @@ print(f"{player} is projected to hit {round (projected_home_runs, 2)} home runs 
 4. Without knowing any of the values stored in the variables, how do you know the line games_remaining = total_season_games - games_played must be correct?
 # The total amount of games in the season is stored as 'total_season_games' and the amount of games the player has played so far is stored as 'games_played'
 # If the total number of games per season is subtracted by the amount of games the player has played so far, the result will be the amount of remaining games in the season
-
-
-
-### More Variables and Printing
