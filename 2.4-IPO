@@ -1,17 +1,66 @@
 Choose two scenarios and create an IPO chart:
 
 How many pizzas to order for a party. Assume everyone will eat two slices and each pizza has eight slices.
-Output - The amount of pizzas needed for the party
-Input - The amount of people at the party
-Processing - Multiply the amount of people at the party by two. Divide the amount by eight (slices per pizza). If the number is not whole, round up to the nearest multipel of eight.
-
+Input
+  - The amount of people at the party
+Processing
+  - Multiply the amount of people at the party by two (slices per person). 
+  - Divide the amount by eight (slices per pizza)
+  - If the number is not whole, round up to the nearest multiple of eight.
+Output 
+  - The amount of pizzas needed for the party
 
 Calculating a team’s win percentage.
+Input 
+  - The amount of wins the team has
+  - The amount of games the team has played
+Processing 
+  - Divide the amount of wins the team has by the amount of games the team has played 
+  - Multiply by 100 to get the percentage
+Output 
+  - The percentage of games that the team wins
+
 Halfway through a hockey season, determine a particular player’s projected number of goals scored for the whole season.
+Input 
+  - The amount of games the player has played so far
+  - The amount of goals the player has scored so far
+  - The amount of total games that there are in a season
+Processing
+  - Divide the amount of goals the player has scored by the amount of games they have played to get their average goals per game
+  - Multiply the average goals per game by the total amount of games in a season 
+  - If the number is not whole, round down to the nearest whole number to get the projected goals in the season
+Output 
+  - The amount of goals that they player should score by the end of the season
+
 Determine the average serve speed of a tennis player’s last five serves.
+Input 
+  - The speed of each of the player's last five serves
+Processing 
+  - Add the speeds of each of the last five servse
+  - Divide the total of all the speeds combined by five to get the averge speed from the last five serves
+Output
+  - The average serve speed of a tennis player's last five serves
+
 
 Choose two scenarios and create an IPO chart:
 Your friend asks you to do their homework for them.
 Ordering a meal from uber eats
+
 Purchasing a snack from the vending machine
+Input
+  - The snack that will be purchaed
+  - The money required to purchase the snack
+Processing 
+  - Calculate the price of the snack
+  - Calculate if there is enough money to purchase the snack
+  - If more than enough, return change
+Output
+  -   Dispense the snack and change if needed
+
 Checking-out groceries at the self-checkout
+Input 
+  - The name and quantity of every single item that is going to be purchased
+Processing
+  - Add all the prices for each item and their amount together 
+Output
+  - The total price of all the groceries 
