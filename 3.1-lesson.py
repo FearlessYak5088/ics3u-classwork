@@ -1,3 +1,5 @@
+# # # If Intro (What If)
+
 robot_location = 30
 ball_location = 35
 goal_location = 20
@@ -80,6 +82,12 @@ if robot_location == goal_location and have_ball is True:
     print("You scored a goal!")
     have_ball = False
   
-
 # What do the operators += and -= do?
     # They add or subtract from the value of the variable 
+
+
+# # # How Old Are You?
+
+
+
+
