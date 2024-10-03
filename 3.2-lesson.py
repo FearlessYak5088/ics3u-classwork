@@ -68,4 +68,46 @@ else:
   print("Please enter a planet number or name.")
 
 ### A Little Quiz
+right_answers = 0
+input("Are you ready for a quiz? ")
+print("Okay, here it comes")
+answer_1 = int(input("""Q1) What is the capital of Alaska?
+                        1) Melbourne
+                        2) Anchorage
+                        3) Juneau
+                        """))
+if answer_1 == 3:
+    print("Correct")
+    right_answers = right_answers + 1
+elif answer_1 == 2 or answer_1 == 1:
+    print("Incorrect")
+else:
+    print("Please input a number from 1-3")
+
+answer_2 = int(input("""Q2)In Python, the way you get keyboard input is the keyobard_input function.
+	                    1) true
+	                    2) false
+                        """))
+if answer_2 == 2:
+    print("Correct")
+    right_answers = right_answers + 1
+elif answer_2 == 1:
+    print("Incorrect")
+else:
+    print("Please input a number from 1-2")
+
+answer_3 = int(input("""Q3) What is the result of 9 + 6 / 3? 
+                        1) 5
+                        2) 11
+                        3) 15/3
+                        """))
+if answer_3 == 2:
+    print("Correct")
+    right_answers = right_answers + 1
+elif answer_3 == 1 or answer_3 == 3:
+    print("Incorrect")
+else:
+    print("Please input a number from 1-3")
+ 
+print(f"Overall, you got {right_answers}/3 correct. Thanks for playing")
 
