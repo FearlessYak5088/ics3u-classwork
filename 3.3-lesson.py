@@ -97,4 +97,51 @@ if location == "both" and alive == "yes":
     print("It's a dog")
 if location == "both" and alive == "no":
     print("It's a cell phone")
+    
+### BMI Categories
+feet = int(input("Enter height (feet only): "))
+inches = int(input("Enter height (inches): "))
+
+total_inches = (feet * 12) + inches
+height_m = total_inches * 0.0254
+
+weight_lbs = float(input("Enter weight (pounds): "))
+
+weight_kg = weight_lbs * 0.45359237
+
+bmi = weight_kg / (height_m ** 2)
+
+if bmi < 18.5:
+    category = "underweight"
+if bmi >= 18.5 and bmi <= 24.9:
+    category = "normal weight"
+if bmi >= 25.0 and bmi <=  29.9:
+    category = "overweight"
+if bmi > 30.0:
+    category = "obese"
+
+print(f"The BMI is {bmi}, which is {category}")
+
+### Gender Game
+gender = input("What is your gender? (M or F): ").lower()
+first_name = input("First Name: ")
+last_name = input("Last Name: ")
+age = int(input("Age: "))
+
+if gender == "F".lower(): 
+    if age >= 20:
+        marry = input(f"Are you married, {first_name}? (Y or N) ").lower()
+        if marry == "Y".lower():
+            print(f"I will call you Mrs. {last_name}")
+        elif marry == "N".lower():
+            print(f"I will call you Ms. {last_name}")
+    else:
+        print(f"I will call you {first_name + " " + last_name}")
+if gender == "M".lower():
+    if age >= 20:
+        print(f"I will call you Mr. {last_name}")
+    else:
+        print(f"I will call you {first_name + " " + last_name}")
+### Attendance
+
 
