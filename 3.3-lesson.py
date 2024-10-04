@@ -142,6 +142,42 @@ if gender == "M".lower():
         print(f"I will call you Mr. {last_name}")
     else:
         print(f"I will call you {first_name + " " + last_name}")
+### Alpha Order
+# Examples where the first word comes before the second word
+print(f"'apple' comes before 'banana': {'apple' < 'banana'}")
+print(f"'cat' comes before 'dog': {'cat' < 'dog'}")
+print(f"'ant' comes before 'bear': {'ant' < 'bear'}")
+print(f"'blue' comes before 'green': {'blue' < 'green'}")
+print(f"'car' comes before 'doghouse': {'car' < 'doghouse'}")
+
+# Examples where the first word comes after the second word
+print(f"'zebra' comes after 'apple': {'zebra' > 'apple'}")
+print(f"'xylophone' comes after 'violin': {'xylophone' > 'violin'}")
+print(f"'sun' comes after 'moon': {'sun' > 'moon'}")
+print(f"'yellow' comes after 'red': {'yellow' > 'red'}")
+print(f"'queen' comes after 'knight': {'queen' > 'knight'}")
+
 ### Attendance
+last_name = input("What is your last name? ")
+
+if last_name[0].lower() <= 'd':
+    print(f"You last name is {last_name}. You will be called early")
+elif 'e' <= last_name[0].lower() <= 'k':
+    print(f"Your last name is {last_name}. You'll be called in the middle of roll call.")
+elif 'l' <= last_name[0].lower() <= 'r':
+    print(f"Your last name is {last_name}. You'll be called later during roll call.")
+else:
+    print(f"Your last name is {last_name}. You'll be called last in roll call.")
+
+### The Worst Guessing Game Ever
+number = 2
+guess = int(input("I'm thinking of a whole number from 1-10. Try to guess it. "))
+
+if guess == number:
+    print("You got it!")
+elif guess < 1 or guess > 10:
+    print("Please enter a valid number")
+else:
+    print("Wrong number")
 
 
