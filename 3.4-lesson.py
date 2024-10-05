@@ -74,3 +74,48 @@ else:
 
 print("MAGIC 8-BALL SAYS: " + response)
 
+### A Number Guessing Game
+import random
+number = random.randrange(1, 11)
+guess = int(input("I am thinking of a number from 1 to 10. Guess the number: "))
+if guess == number:
+    print(f"Correct! I was thinking of {number}!")
+if guess != number:
+    print(f"Incorrect. I was thinking of {number}")
+if guess < 1 or guess > 10:
+    print("Please input a number from 1 to 10.")
+
+### Fortune Cookie
+import random
+fortune = random.randint(1, 6)
+lottery = random.randrange
+
+num1 = random.randint(1, 54)
+num2 = random.randint(1, 54)
+num3 = random.randint(1, 54)
+num4 = random.randint(1, 54)
+num5 = random.randint(1, 54)
+num6 = random.randint(1, 54)
+
+while len({num1, num2, num3, num4, num5, num6}) < 6:
+    num1 = random.randint(1, 54)
+    num2 = random.randint(1, 54)
+    num3 = random.randint(1, 54)
+    num4 = random.randint(1, 54)
+    num5 = random.randint(1, 54)
+    num6 = random.randint(1, 54)
+
+if fortune >= 1 or fortune >= 6:
+    if fortune == 1:
+        print("A bold decision you make soon will lead to unexpected rewards.")
+    if fortune == 2:
+        print("An exciting opportunity is waiting for you; stay open to new possibilities.")
+    if fortune == 3:
+        print("Your determination will turn a challenge into a great success.")
+    if fortune == 4:
+        print("Someone from your past will bring you good news soon.")
+    if fortune == 5:
+        print("Trust your instincts-they will guide you to the right path.")
+    if fortune == 6:
+        print("Your creativity will open doors to new adventures and connections.")
+    print(f"Lottery numbers:{num1, num2, num3, num4, num5, num6} ")
