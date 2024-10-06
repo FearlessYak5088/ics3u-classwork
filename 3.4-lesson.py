@@ -119,3 +119,29 @@ if fortune >= 1 or fortune >= 6:
     if fortune == 6:
         print("Your creativity will open doors to new adventures and connections.")
     print(f"Lottery numbers:{num1, num2, num3, num4, num5, num6} ")
+
+### Dice
+import random
+roll1 = random.randint(1,6)
+roll2 = random.randint(1,6)
+
+print(f"Roll 1: {roll1} \nRoll 2: {roll2} \nTotal: {roll1 + roll2}")
+
+### One Shot Hi-Lo
+import random
+
+secret_number = random.randint(1,100)
+
+guess = int(input("I'm thinking of a number from 1-100. Try to guess it. \n"))
+
+if 1 <= guess <=100:
+    if guess == secret_number:
+        print("You guessed it! That was a 1 percent chance!")
+    elif guess > secret_number:
+        print(f"Incorrect. Your guess is too high. The number is {secret_number}.")
+    elif guess < secret_number:
+        print(f"Incorrect. Your guess is too low. The number is {secret_number}.")
+else:
+    print("Please input a number from 1-100.")
+
+### Three Card Monte
