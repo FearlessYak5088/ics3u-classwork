@@ -145,3 +145,21 @@ else:
     print("Please input a number from 1-100.")
 
 ### Three Card Monte
+import random
+
+ace = random.randint(1,3)
+
+print("You slide up to Fast Eddie's card table and plop down your cash. \nHe glances at you out of the corner of his eye and starts shuffling. \nHe lays down three cards.")
+
+guess = int(input("""Which one is the ace?
+                        ##  ##  ##
+                        ##  ##  ##
+                        1   2   3
+                        """))
+
+if guess == ace:
+    print("You nailed it! Fast Eddie reluctantly hands over your winnings, scowling.")
+elif guess != ace and 1 <= guess <= 3:
+    print(f"Ha! Fast Eddie wins again! The ace was card number {ace}.")
+else:
+    print("You have to guess one of the three cups...")
