@@ -1,5 +1,5 @@
-Write a program that creates a list to hold random numbers from 1 to 100. Display the values in the list on the screen. 
-Then use a linear search to find the largest value in the list, and display that value.
+# Write a program that creates a list to hold random numbers from 1 to 100. Display the values in the list on the screen. 
+# Then use a linear search to find the largest value in the list, and display that value.
 
 import random
 
