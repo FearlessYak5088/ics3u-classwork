@@ -18,11 +18,11 @@ green = (1, 70, 42)
 gray = (51, 51, 51)
 gray2 = (75, 75, 75)
 orange = (200, 100, 0)
+orange2 = (255,140,0)
 brown = (92, 64, 51)
 white = (144, 144, 144)
 white2 = (200, 200, 200)
 black = (0, 0, 0)
-orange = (255,140,0)
 
 moon_x = 120
 moon_y = 125
@@ -82,7 +82,7 @@ while True:
             moon_active = False  # Deactivate the moon when it goes off screen
     else:
         # Draw the sun
-        pygame.draw.circle(screen, orange, (sun_x, sun_y), 60)
+        pygame.draw.circle(screen, orange2, (sun_x, sun_y), 60)
         
 
         # Move the sun up
