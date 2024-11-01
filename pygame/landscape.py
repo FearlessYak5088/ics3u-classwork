@@ -23,12 +23,14 @@ white = (144, 144, 144)
 white2 = (200, 200, 200)
 black = (0, 0, 0)
 orange2 = (255,140,0)
+yellow = (204, 204, 0)
 
+window_colour = white2
 moon_x = 0
 moon_y = 155
-sun_x = 120
+sun_x = 0
 sun_y = 125
-sun_active = True
+day = True
 
 # loop
 while True:
@@ -36,12 +38,41 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-
     # sky
-    if sun_active:
+    if day:
         screen.fill(blue2)
-    elif sun_active == False:
+
+        # draw the sun
+        pygame.draw.circle(screen, orange2, (sun_x, sun_y), 60)
+        
+        # make a parabola that the sun follows
+        parabola = ((sun_x - 400) ** 2) / 500
+
+        # move the sun up
+        sun_x += 0.075
+        sun_y = parabola
+
+        if sun_x > width + 65:
+            day = False
+    else:
         screen.fill(blue)
+
+        # draw the moon
+        pygame.draw.circle(screen, white, (moon_x, moon_y), 60)
+
+        # moon texture
+        pygame.draw.circle(screen, gray2, (moon_x - 20, moon_y + 20), 20)
+        pygame.draw.circle(screen, gray2, (moon_x - 10, moon_y - 20), 12)
+
+        # change window colour (light turns on in house)
+        window_colour = yellow 
+
+        # change the parabola to affect the moon
+        parabola = ((moon_x - 400) ** 2) / 500
+
+        # move the moon  
+        moon_x += 0.075
+        moon_y = parabola
 
     # ground
     pygame.draw.rect(screen, green, (0, 400, width, height - 400))
@@ -59,45 +90,11 @@ while True:
     pygame.draw.circle(screen, white, (395, 450), 8)
 
     # window
-    pygame.draw.ellipse(screen, white2, (485, 380, 80, 80))
+    pygame.draw.ellipse(screen, window_colour, (485, 380, 80, 80))
     pygame.draw.line(screen, black, (525, 380), (525, 460), 2)
     pygame.draw.line(screen, black, (485, 420), (565, 420), 2)
-
-    if sun_active:
-        # draw the sun
-        pygame.draw.circle(screen, orange2, (sun_x, sun_y), 60)
-        
-        # move the sun up
-        if sun_x <= width // 2:
-            sun_x += 0.05
-            sun_y -= 0.01
-        elif sun_x < width + 65:
-            sun_x += 0.05
-            sun_y += 0.01
-        else:
-            sun_active = False
-
-    else:
-        # draw the moon
-        pygame.draw.circle(screen, white, (moon_x, moon_y), 60)
-
-        # moon texture
-        pygame.draw.circle(screen, gray2, (moon_x - 20, moon_y + 20), 20)
-        pygame.draw.circle(screen, gray2, (moon_x - 10, moon_y - 20), 12)
-
-        # move the moon
-        if moon_x <= width // 2:  
-            moon_x += 0.05
-            moon_y -= 0.01
-        else:
-            moon_x += 0.05
-            moon_y += 0.01
             
 
     # update the display
     pygame.display.flip()
-
-
-
-
 
