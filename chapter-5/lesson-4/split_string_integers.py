@@ -10,4 +10,5 @@ string_int = string.split (",")
 
 for string in string_int:
     list.append(int(string))
-print(list)
+for i in range(len(list)):
+    print(f"{i}: {list[i]}")
